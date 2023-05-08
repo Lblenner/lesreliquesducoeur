@@ -5,8 +5,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main>
-      yo !
+    <main className=' flex flex-col w-full items-center'>
+      <div className='h-60'></div>
+      Infos sur le projet
     </main>
   )
 }

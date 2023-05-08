@@ -1,4 +1,4 @@
-import { UiFileInputButton } from "@/components/upload";
+import Upload from "@/components/upload";
 import axios from "axios";
 
 export default function AddContent() {
@@ -19,9 +19,7 @@ export default function AddContent() {
 
   return (
     <main>
-      <UiFileInputButton
-        label="Upload Single File"
-        uploadFileName="theFiles"
+      <Upload
         onChange={onChange}
       />
     </main>
