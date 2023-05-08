@@ -33,9 +33,9 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
     }
 
     return (
-        <div className={`absolute top-0 left-0 h-screen w-screen  bg-gray-900 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
+        <div className={`z-10 absolute top-0 left-0 h-screen w-screen  bg-gray-900 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out filter drop-shadow-md `}>
             <div className="flex  h-16 items-center justify-center filter drop-shadow-md bg-gray-500 h-20"> {/*logo container*/}
-                <a className="text-xl font-semibold" href="/">JUTO</a>
+                {/* <a className="text-xl font-semibold" href="/">JUTO</a> */}
             </div>
             <div className="flex flex-col">
                 <button className="text-xl font-normal my-4 text-black block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
@@ -44,12 +44,12 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
                 </button>
                 <button className="text-xl font-normal my-4 text-black block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                     onClick={() => goTo("/show_content")}>
-                    Explorer
+                    Témoignages
                 </button>
-                <button className="text-xl font-normal my-4 text-black block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                {/* <button className="text-xl font-normal my-4 text-black block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                     onClick={() => goTo("/add_content")}>
                     Participer
-                </button>
+                </button> */}
             </div>
         </div>
     )
@@ -65,7 +65,7 @@ function Navbar() {
             < MobileNav open={open} setOpen={setOpen} />
 
             <div className="p-4">
-                <button className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden" onClick={() => {
+                <button className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden z-10" onClick={() => {
                     setOpen(!open)
                 }}>
                     <span className="sr-only">Open main menu</span>
@@ -84,14 +84,14 @@ function Navbar() {
                 </li>
                 <li>
                     <NavLink to="/show_content">
-                        Explorer
+                        Témoignages
                     </NavLink>
                 </li>
-                <li>
+                {/* <li>
                     <NavLink to="/add_content">
                         Participer
                     </NavLink>
-                </li>
+                </li> */}
             </ul>
 
         </nav >
