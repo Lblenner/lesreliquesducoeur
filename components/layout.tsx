@@ -38,13 +38,13 @@ const MobileNav = ({ open, setOpen }: MobileNavProps) => {
                 {/* <a className="text-xl font-semibold" href="/">JUTO</a> */}
             </div>
             <div className={`${poppy.className} flex flex-col`}>
-                <button className={`text-2xl my-4 text-black block py-2 pl-3 pr-4 text-gray-700 rounded mx-16 hover:bg-orange-fonce text-white`}
+                <button className={`text-2xl my-4 text-black block py-2 pl-3 pr-4 text-gray-700 rounded mx-16 hover:bg-orange-fonce `}
                     onClick={() => goTo("/")}>
-                    Présentation
+                    Le projet
                 </button>
-                <button className="text-2xl my-4 text-black block py-2 pl-3 pr-4 text-gray-700 rounded mx-16 hover:bg-orange-fonce  text-white"
+                <button className="text-2xl my-4 text-black block py-2 pl-3 pr-4 text-gray-700 rounded mx-16 hover:bg-orange-fonce "
                     onClick={() => goTo("/show_content")}>
-                    Témoignages
+                    Archive des reliques
                 </button>
                 {/* <button className="text-xl font-normal my-4 text-black block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                     onClick={() => goTo("/add_content")}>
@@ -79,12 +79,12 @@ function Navbar(props: LayoutProps) {
             <ul className={`${poppy.className} h-8 text-white text-2xl w-full items-center justify-center hidden w-full md:flex md:w-auto gap-40`}>
                 <li className="hover:text-black ">
                     <NavLink to="/">
-                        Présentation
+                        Le projet
                     </NavLink>
                 </li>
                 <li className="hover:text-black ">
                     <NavLink to="/show_content">
-                        Objets
+                        Archive des reliques
                     </NavLink>
                 </li>
                 {/* <li>
